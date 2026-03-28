@@ -1,16 +1,16 @@
-#profile-title:𝐒𝐮𝐥𝐢𝐦 𝐕𝐏𝐍🏳️
+#profile-title:АНТИЗАГЛУШКА
 
 #profile-update-interval: 1
 
-#profile-subscription-url: https://raw.githubusercontent.com/huha-create/Sulim-vpn/main/README.md
+#profile-subscription-url: https://raw.githubusercontent.com/antivpn-7/Antivpn/main/README.md
 
-#support-url: https://wa.me/79639864491
+#support-url: https://wa.me/79659571323
 
-#profile-web-page-url: https://wa.me/79639864491
+#profile-web-page-url: https://wa.me/79659571323
 
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 
-#profile-notice: ━━━━━━━━━━━━━━━\n 𝐒𝐮𝐥𝐢𝐦 𝐕𝐏𝐍🏳️ \n━━━━━━━━━━━━━━━\n🛡 Статус: Активен\n🚀 Трафик: Безлимитный\n⚡ Скорость: Максимальная\n━━━━━━━━━━━━━━━
+#profile-notice: ━━━━━━━━━━━━━━━\n  \n━━━━━━━━━━━━━━━\n🛡 Статус: Активен\n🚀 Трафик: Безлимитный\n⚡ Скорость: Максимальная\n━━━━━━━━━━━━━━━
 
 #profile-icon: https://share.google/Kl64QMcBQApgnH6aJ
 
