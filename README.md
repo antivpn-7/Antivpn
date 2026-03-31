@@ -32,6 +32,7 @@
 
 #announce:Если не работает Обновляйте подписку 🔄 Новые конфиги появляются регулярно!💡
 
+vless://fc3becc0-96e2-45b8-890a-7b746ad3c381@51.250.90.82:5443?security=reality&encryption=none&pbk=LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=max.ru#%F0%9F%87%AA%F0%9F%87%BA%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%91%D0%B0%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%20
 vless://cc877de3-ffb5-4d0a-9b01-ca086ab53df8@89.208.84.202:8443?security=reality&encryption=none&pbk=3fhnnUgU4zUNvhE43-cxG9lJwyJ5gLrvh_JG9D8AV0U&headerType=none&fp=edge&type=tcp&flow=xtls-rprx-vision&sni=max.ru&sid=e10584b094deed07#%F0%9F%87%B3%F0%9F%87%B1%D0%93%D0%BB%D1%83%D1%88%D0%B8%D0%BB%D0%BA%D0%B0%201
 vless://cc877de3-ffb5-4d0a-9b01-ca086ab53df8@89.208.84.202:8443?mode=auto&path=%2Fws.js&security=reality&encryption=none&pbk=3fhnnUgU4zUNvhE43-cxG9lJwyJ5gLrvh_JG9D8AV0U&fp=edge&type=xhttp&sni=max.ru&sid=e10584b094deed07#%F0%9F%87%B3%F0%9F%87%B1%D0%93%D0%BB%D1%83%D1%88%D0%B8%D0%BB%D0%BA%D0%B0%202
 vless://cc877de3-ffb5-4d0a-9b01-ca086ab53df8@95.163.214.83:7443?security=reality&encryption=none&pbk=S1LRZAgMS-bfA8rNXovBB8HA-mQR9eJPa5h-Z9dH9g8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=max.ru#%F0%9F%87%B3%F0%9F%87%B1%D0%93%D0%BB%D1%83%D1%88%D0%B8%D0%BB%D0%BA%D0%B0%203
