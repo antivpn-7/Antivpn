@@ -32,7 +32,9 @@
 
 #announce:Если не работает Обновляйте подписку 🔄 Новые конфиги появляются регулярно!💡
 
-vless://e810f663-5ceb-4262-98c3-6157058afe58@nl-3.bexum.fun:443?flow=xtls-rprx-vision&type=tcp&headerType=none&security=tls&sni=nl-3.bexum.fun&fp=chrome&allowInsecure=0#%F0%9F%87%B5%F0%9F%87%B0WhatsApp
+vless://e810f663-5ceb-4262-98c3-6157058afe58@nl-3.bexum.fun:443?security=tls&encryption=none&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=nl-3.bexum.fun#🇵🇰 WhatsApp 🟢 1
+vless://e810f663-5ceb-4262-98c3-6157058afe58@bero-2.bexum.fun:9443?security=tls&encryption=none&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=bero-2.bexum.fun#🇵🇰 WhatsApp 🟢 2
+vless://e810f663-5ceb-4262-98c3-6157058afe58@bero-3.bexum.fun:9443?security=tls&encryption=none&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=bero-3.bexum.fun#🇵🇰 WhatsApp 🟢 3
 
 vmess://eyJhZGQiOiJyZW5kZXJlci1zdHJlYW0tMS0zMTIubWlycmEubm93IiwiYWlkIjoiMCIsImFscG4iOiJoMixodHRwLzEuMSIsImZwIjoiY2hyb21lIiwiaG9zdCI6InJlbmRlcmVyLXN0cmVhbS0xLTMxMi5taXJyYS5ub3ciLCJpZCI6ImZmZDk3Y2IzLWU5YjItNGE1ZS04MWYwLTVkY2NlMjVkNTQ2MCIsIm5ldCI6IndzIiwicGF0aCI6Ii9hcGkvdjEvZ3B1LXN0cmVhbS9zb2NrZXQiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e38J+HuiDQk9C70YPRiNC40LvQutCwIOKaoSAxIiwic2N5IjoiYXV0byIsInNuaSI6InJlbmRlcmVyLXN0cmVhbS0xLTMxMi5taXJyYS5ub3ciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
 vmess://eyJhZGQiOiJyZW5kZXJlci1zdHJlYW0tMS0zMTIubWlycmEubm93IiwiYWlkIjoiMCIsImFscG4iOiJoMixodHRwLzEuMSIsImZwIjoiY2hyb21lIiwiaG9zdCI6InJlbmRlcmVyLXN0cmVhbS0xLTMxMi5taXJyYS5ub3ciLCJpZCI6ImZmZDk3Y2IzLWU5YjItNGE1ZS04MWYwLTVkY2NlMjVkNTQ2MCIsIm5ldCI6IndzIiwicGF0aCI6Ii9hcGkvdjEvZ3B1LXN0cmVhbS9zb2NrZXQiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e38J+HuiDQk9C70YPRiNC40LvQutCwIOKaoSAyIiwic2N5IjoiYXV0byIsInNuaSI6InJlbmRlcmVyLXN0cmVhbS0xLTMxMi5taXJyYS5ub3ciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
