@@ -4,9 +4,9 @@
 
 #profile-subscription-url: https://raw.githubusercontent.com/antivpn-7/Antivpn/main/README.md
 
-#support-url:Wa.me/+79659571323
+#support-url:https://wa.me/79659571323
 
-#profile-web-page-url:Wa.me/+79659571323
+#profile-web-page-url:https://wa.me/79659571323
 
 #subscription-userinfo: upload=0; download=; total=0; expire=1
 
