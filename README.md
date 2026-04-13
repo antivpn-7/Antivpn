@@ -37,13 +37,7 @@ vless://2d5728e2-bfca-4081-86e2-3b34200219be@51.250.90.82:5443?security=reality&
 
 vless://2d5728e2-bfca-4081-86e2-3b34200219be@51.250.25.175:5443?security=reality&encryption=none&pbk=LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=max.ru#🇦🇷 АВТО-ВЫБОР #2 🔀
 
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@one.vbirfio.site:443?path=%2F019bcdc-f4d78a0ab0bb%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=wlde.vbirfio.site&fp=qq&type=ws&sni=s.vbirfio.site#🇪🇺 Глушилка №1
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@two.vbirfio.site:8443?path=%2F019bcdc-f4d78a0ab0bb%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=wlde.vbirfio.site&fp=qq&type=ws&sni=s.vbirfio.site#🇪🇺 Глушилка №2
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@three.vbirfio.site:443?path=%2F019bcdc-f4d78a0ab0bb%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=wlde.vbirfio.site&fp=qq&type=ws&sni=s.vbirfio.site#🇪🇺 Глушилка №3
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@four.vbirfio.site:443?path=%2F019bcdc-f4d78a0ab0bb%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=wlde.vbirfio.site&fp=qq&type=ws&sni=s.vbirfio.site#🇪🇺 Глушилка №4
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@five.vbirfio.site:443?path=%2F019bcdc-f4d78a0ab0bb%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=wlde.vbirfio.site&fp=qq&type=ws&sni=s.vbirfio.site#🇪🇺 Глушилка №5
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@six.vbirfio.site:443?path=%2F019bcdc-f4d78a0ab0bb%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=wlde.vbirfio.site&fp=qq&type=ws&sni=s.vbirfio.site#🇪🇺 Глушилка №6
-vless://1c1291bf-5f96-4686-b7e4-17d8ec84a6e7@seven.vbirfio.site:443?mode=gun&security=reality&encryption=none&pbk=Oo5bGfNq5qWp4mx6eeGtYpwzOZx7-pc81ELdbW1YvTc&fp=qq&spx=%2F&type=grpc&serviceName=%2F06784407c0c9&sni=max.ru&sid=7b803a23424e8a95#🇪🇺 Глушилка №7
+
 vless://f9348c30-8a34-40bc-ae15-e938235b9a6b@51.250.14.157:443?mode=multi&security=reality&encryption=none&pbk=h6gpE3mCwKFwTx7nn_hAtAIF1pHFIuXWdNVyYrokqkI&fp=firefox&spx=%2F1f630fecd5eceade&type=grpc&sni=max.ru&sid=dcbaae96dfd126d0#🇩🇪 Глушилка №8
 vless://f9348c30-8a34-40bc-ae15-e938235b9a6b@51.250.100.31:443?mode=multi&security=reality&encryption=none&pbk=h6gpE3mCwKFwTx7nn_hAtAIF1pHFIuXWdNVyYrokqkI&fp=firefox&spx=%2F1f630fecd5eceade&type=grpc&sni=max.ru&sid=dcbaae96dfd126d0#🇩🇪 Глушилка №9
 vless://f9348c30-8a34-40bc-ae15-e938235b9a6b@84.201.159.154:443?mode=multi&security=reality&encryption=none&pbk=h6gpE3mCwKFwTx7nn_hAtAIF1pHFIuXWdNVyYrokqkI&fp=firefox&spx=%2F1f630fecd5eceade&type=grpc&sni=max.ru&sid=dcbaae96dfd126d0#🇩🇪 Глушилка №10
