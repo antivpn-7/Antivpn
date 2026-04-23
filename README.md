@@ -30,7 +30,7 @@
 
 #auto-continue: true
 
-#announce:Если не работает Обновляйте подписку 🔄 Новые конфиги появляются регулярно!💡
+#announce:Если VPN не работает нажмите 🔄 , после ⏱️ и выберите сервер с наименьшим показателем ms!
 
 vless://ae9d4558-d700-41e8-a1fb-415580507b5e@clo.lavivas.org:8080?security=reality&encryption=none&pbk=K77asb8hInjx4LNYkx9t-kR1_4w7zCEypRI5tqQvB2M&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.com#%F0%9F%87%B7%F0%9F%87%BA%20%D0%90%D0%BD%D1%82%D0%B8%D0%B7%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%20%28test%29%20%E2%81%BF%E1%B5%89%CA%B7
 vless://ae9d4558-d700-41e8-a1fb-415580507b5e@cloud.lavivas.org:8080?security=reality&encryption=none&pbk=i3Gso3TALndleIicnEuma7_ix-hlGzk_BelrHPysZh8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.com#%F0%9F%87%B7%F0%9F%87%BA%20%D0%90%D0%BD%D1%82%D0%B8%D0%B7%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%20%28test%29%20%E2%81%BF%E1%B5%89%CA%B7
