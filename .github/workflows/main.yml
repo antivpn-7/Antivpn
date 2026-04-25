@@ -1,4 +1,4 @@
-name: Anti-Zaglushka MSK Timer Clean Title
+name: Anti-Zaglushka FAST & WORK ONLY
 
 on:
   schedule:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Fetch, Ping and Sync
+      - name: Fetch, Fast Ping and Sync
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
@@ -26,34 +26,48 @@ jobs:
           FLAGS=("🇺🇸" "🇩🇪" "🇫🇮" "🇵🇱" "🇳🇱" "🇬🇧" "🇫🇷" "🇰🇿" "🇹🇷" "🇸🇪" "🇦🇹" "🇨🇿")
           LIMIT=222
 
-          # 2. Подготовка (сохраняем VIP)
+          # 2. Подготовка
           touch README.md
           grep "://" README.md | grep -v "Антизаглушка" | grep -v "---" | grep -v "ОБНОВЛЕНО" > my_own_keys.txt || touch my_own_keys.txt
           grep "://" README.md | cut -d'#' -f1 > existing_urls.txt
 
-          # 3. Сбор новых ключей (Тайм-аут 1.3с)
-          > new_keys.txt
-          NEW_ADDED=0
+          # 3. Быстрый сбор всех ссылок
+          > raw_combined.txt
           for url in "${SOURCES[@]}"; do
-            curl -L -s --retry 3 "$url" -o temp.txt
-            grep "://" temp.txt > raw_temp.txt || cp temp.txt raw_temp.txt
-
-            while IFS= read -r line; do
-              CLEAN_URL=$(echo "$line" | cut -d'#' -f1)
-              if [[ $CLEAN_URL =~ ^(vless|vmess|trojan|ss):// ]] && ! grep -q "$CLEAN_URL" existing_urls.txt; then
-                HOST=$(echo "$CLEAN_URL" | sed -e 's/.*@//' -e 's/:.*//' -e 's/\/.*//')
-                PORT=$(echo "$CLEAN_URL" | sed -e 's/.*://' -e 's/[?#\/].*//')
-                if timeout 1.3s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
-                  RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
-                  echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка 🚀" >> new_keys.txt
-                  NEW_ADDED=$=$((NEW_ADDED + 1))
-                  echo "$CLEAN_URL" >> existing_urls.txt
-                fi
-              fi
-            done < raw_temp.txt
+            curl -L -s --retry 3 "$url" >> raw_combined.txt
           done
 
-          # 4. Очистка до лимита
+          # Функция проверки (экспортируем для xargs)
+          check_server() {
+            line=$1
+            CLEAN_URL=$(echo "$line" | cut -d'#' -f1)
+            if [[ $CLEAN_URL =~ ^(vless|vmess|trojan|ss):// ]]; then
+              HOST=$(echo "$CLEAN_URL" | sed -e 's/.*@//' -e 's/:.*//' -e 's/\/.*//')
+              PORT=$(echo "$CLEAN_URL" | sed -e 's/.*://' -e 's/[?#\/].*//')
+              # Пинг 1.3 секунды
+              if timeout 1.3s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
+                echo "$CLEAN_URL" >> valid_list.txt
+              fi
+            fi
+          }
+          export -f check_server
+
+          # ЗАПУСК ПАРАЛЛЕЛЬНОЙ ПРОВЕРКИ (15 потоков)
+          > valid_list.txt
+          grep "://" raw_combined.txt | sort -u | xargs -I {} -P 15 bash -c 'check_server "{}"'
+
+          # 4. Фильтруем только новые из рабочих
+          > new_keys.txt
+          NEW_ADDED=0
+          while read -r url; do
+            if ! grep -q "$url" existing_urls.txt; then
+              RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
+              echo "${url}#${RANDOM_FLAG} Антизаглушка 🚀" >> new_keys.txt
+              NEW_ADDED=$((NEW_ADDED + 1))
+            fi
+          done < valid_list.txt
+
+          # 5. Очистка до лимита
           grep "ОБХОД БЛОКИРОВКИ" README.md > current_source_keys.txt || touch current_source_keys.txt
           cat new_keys.txt >> current_source_keys.txt
           TOTAL_BEFORE=$(wc -l < current_source_keys.txt)
@@ -65,12 +79,10 @@ jobs:
              cp current_source_keys.txt cleaned_source_keys.txt
           fi
 
-          # 5. СБОРКА README (Чистый заголовок + МСК Таймер)
+          # 6. СБОРКА README (МСК + Таймер)
           export TZ="Europe/Moscow"
           TIME_NOW=$(date +'%H:%M')
-          
-          CURRENT_MIN=$(date +'%M')
-          MIN_LEFT=$((60 - 10#$CURRENT_MIN))
+          MIN_LEFT=$((60 - 10#$(date +'%M')))
           
           TRAFFIC_LINE=$(grep "#subscription-userinfo" README.md | head -n 1 || echo "#subscription-userinfo: upload=0; download=0; total=1125899906842624; expire=3803572800")
           
@@ -82,25 +94,22 @@ jobs:
           echo "happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN" >> README.md
           echo "" >> README.md
           
-          # Инфо-строка
           RAND_ID=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 8 | head -n 1)
           echo "vless://$RAND_ID@1.1.1.1:443?security=reality#🕒 ОБНОВЛЕНО В $TIME_NOW (МСК)" >> README.md
-          
-          # Разделители
           echo "vless://0@1.1.1.1:443?security=reality#--- 💎 ТВОИ VIP СЕРВЕРЫ 💎 ---" >> README.md
           cat my_own_keys.txt >> README.md
           echo "" >> README.md
           echo "vless://0@1.1.1.1:443?security=reality#--- 🚀 ОБЩАЯ БАЗА ($LIMIT) ---" >> README.md
           
           IDX=1
-          sort cleaned_source_keys.txt | while IFS= read -r line; do
+          sort cleaned_source_keys.txt | while read -r line; do
              CLEAN_LINE=$(echo "$line" | sed 's/ №[0-9]*//g')
              echo "${CLEAN_LINE} №$IDX" >> README.md
              IDX=$((IDX + 1))
           done
 
-          # 6. Телеграм отчет
-          MSG="👑 *ОБНОВЛЕНИЕ АНТИЗАГЛУШКИ*%0A🕒 Сейчас: *$TIME_NOW*%0A⏳ До новой базы: *$MIN_LEFT мин*%0A✅ Новых: *$NEW_ADDED*%0A🧹 Удалено: *$REMOVED*"
+          # 7. Отчет
+          MSG="⚡️ *FAST WORK SYNC*%0A🕒 Время: *$TIME_NOW МСК*%0A✅ Новых (рабочих): *$NEW_ADDED*%0A🧹 Удалено: *$REMOVED*%0A⏳ Ожидание: *$MIN_LEFT мин*"
           curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CHAT_ID" -d "parse_mode=Markdown" -d "text=$MSG"
 
       - name: Commit and Push
@@ -108,6 +117,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Github Action"
           git add README.md
-          git commit -m "Title Update $TIME_NOW" || exit 0
+          git commit -m "Fast Work Sync $TIME_NOW" || exit 0
           git push origin main
           
