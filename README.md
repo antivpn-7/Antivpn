@@ -1,8 +1,11 @@
 #subscription-userinfo: upload=1; download=1; total=1; expire=999999999999999
 #profile-title: АНТИЗАГЛУШКА 
+#profile-update-interval: 1
+#subscription-update-interval: 1
 #announce:Если VPN не работает нажмите 🔄 , после ⏱️ и выберите сервер с наименьшим показателем ms!
 happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
 
+happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
 happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
 #profile-subscription-url: https://raw.githubusercontent.com/antivpn-7/Antivpn/main/README.md
 #support-url:https://wa.me/79659571323
@@ -341,13 +344,15 @@ vless://75807638-6f19-2710-ae08-38492ee85c88@cluster-de-2.firstvideocdn.ru:52006
 vless://75807638-6f19-2710-ae08-38492ee85c88@cluster-de-2.firstvideocdn.ru:52006?flow=xtls-rprx-vision&security=tls&encryption=none&sni=cluster-de-2.firstvideocdn.ru&type=tcp&path=%2f#🇫🇮 Антизаглушка №335
 vless://75807638-6f19-2710-ae08-38492ee85c88@cluster-de-2.firstvideocdn.ru:52006?type=tcp&security=tls&encryption=none&fp=chrome&flow=xtls-rprx-vision&insecure=1#🇰🇿 Антизаглушка №336
 vless://75807638-6f19-2710-ae08-38492ee85c88@cluster-de-2.firstvideocdn.ru:52006?type=tcp&security=tls&encryption=none&sni=cluster-de-2.firstvideocdn.ru&fp=chrome&flow=xtls-rprx-vision&insecure=1#🇬🇧 Антизаглушка №337
-vless://6aeb78b3-d73c-44c8-b7f6-39bd5c1008a1@217.16.29.243:443?type=tcp&security=reality&flow=xtls-rprx-vision&sni=sun1-26.userapi.com&pbk=3BzJ7mIMm_8w9UEDlw3zDhNLlBIkfRaMBPDFW8vAJyI&fp=chrome&bx=%2F&sid=d0ed40fcfa270aa8#🇨🇿 Антизаглушка 🚀 №339
-vless://d2145019-520b-4d61-af91-350aac978a04@91.219.227.253:8083?encryption=none&type=tcp&security=reality&fp=qq&sni=ads.x5.ru&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c#🇩🇪 Антизаглушка 🚀 №340
-vless://fd74f9cd-d202-432e-8cd3-d445bfe30828@79.174.91.100:2443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=random&sni=ads.x5.ru&pbk=5w9AftPH_705ynMzcG03D3z61O1qegNp6WFL6jOXxRA&sid=e035146d93da51a9&spx=%2F#🇩🇪 Антизаглушка 🚀 №341
-vless://4649d681-7f26-4959-a3f2-02eb8866230f@45.150.109.26:9443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=yahoo.com&pbk=wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg&sid=2344766a270a6298#🇬🇧 Антизаглушка 🚀 №342
-vless://60ae82da-f839-4125-aa1e-3df0e2a5c30c@5.188.224.137:2083?type=grpc&security=reality&encryption=none&fp=chrome&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38&sni=ir.ozone.ru&mode=gun&serviceName=UpdateService#🇬🇧 Антизаглушка 🚀 №343
-vless://88bc511b-c912-4745-86e8-685fd3f381bf@109.69.218.165:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=randomized&sni=lerua.xyz&pbk=6rnKHCkFuVeaJjiXLnJhfzQpQRSlPt-i6USvnRFiUBg&sid=223d6eafc6c6e894#🇫🇷 Антизаглушка 🚀 №344
-vless://e8485150-d10e-4271-b2fb-dd37c9bd44f4@109.69.218.161:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=randomized&sni=lerua.xyz&pbk=6rnKHCkFuVeaJjiXLnJhfzQpQRSlPt-i6USvnRFiUBg&sid=223d6eafc6c6e894#🇸🇪 Антизаглушка 🚀 №345
-vless://60ae82da-f839-4125-aa1e-3df0e2a5c30c@5.188.224.136:2083?encryption=none&type=grpc&security=reality&mode=gun&serviceName=UpdateService&fp=chrome&sni=ir.ozone.ru&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38#🇰🇿 Антизаглушка 🚀 №346
-vless://74d3057f-5d2b-4d21-8819-3b387d47c0a4@5.188.224.136:2083?encryption=none&type=grpc&security=reality&mode=gun&serviceName=UpdateService&fp=chrome&sni=ir.ozone.ru&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38#🇨🇿 Антизаглушка 🚀 №347
-vless://f6b71e78-e065-4cf8-9fbb-b9e25ff67eff@5.188.224.73:2083?type=grpc&security=reality&fp=chrome&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38&sni=ir.ozone.ru&mode=gun&serviceName=UpdateService#🇦🇹 Антизаглушка 🚀 №348
+vless://6aeb78b3-d73c-44c8-b7f6-39bd5c1008a1@217.16.29.243:443?type=tcp&security=reality&flow=xtls-rprx-vision&sni=sun1-26.userapi.com&pbk=3BzJ7mIMm_8w9UEDlw3zDhNLlBIkfRaMBPDFW8vAJyI&fp=chrome&bx=%2F&sid=d0ed40fcfa270aa8#🇦🇹 Антизаглушка 🚀 №340
+vless://d2145019-520b-4d61-af91-350aac978a04@91.219.227.253:8083?encryption=none&type=tcp&security=reality&fp=qq&sni=ads.x5.ru&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c#🇵🇱 Антизаглушка 🚀 №341
+vless://fd74f9cd-d202-432e-8cd3-d445bfe30828@79.174.91.100:2443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=random&sni=ads.x5.ru&pbk=5w9AftPH_705ynMzcG03D3z61O1qegNp6WFL6jOXxRA&sid=e035146d93da51a9&spx=%2F#🇺🇸 Антизаглушка 🚀 №342
+vless://322ffd77-9adc-4e10-8302-a8bcc14555a0@144.31.127.55:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=gateway.icloud.com&pbk=-ZIDWF9CykNoZYNpO6Vi7BdDyZl_hJUYxuIRmPnuxBk&sid=c6118398#🇺🇸 Антизаглушка 🚀 №343
+vless://322ffd77-9adc-4e10-8302-a8bcc14555a0@rc5.muslimtr.ru:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=gateway.icloud.com&fp=chrome&pbk=-ZIDWF9CykNoZYNpO6Vi7BdDyZl_hJUYxuIRmPnuxBk&sid=c6118398#🇬🇧 Антизаглушка 🚀 №344
+vless://4649d681-7f26-4959-a3f2-02eb8866230f@45.150.109.26:9443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=yahoo.com&pbk=wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg&sid=2344766a270a6298#🇬🇧 Антизаглушка 🚀 №345
+vless://88bc511b-c912-4745-86e8-685fd3f381bf@109.69.218.165:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=randomized&sni=lerua.xyz&pbk=6rnKHCkFuVeaJjiXLnJhfzQpQRSlPt-i6USvnRFiUBg&sid=223d6eafc6c6e894#🇰🇿 Антизаглушка 🚀 №346
+vless://e8485150-d10e-4271-b2fb-dd37c9bd44f4@109.69.218.161:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=randomized&sni=lerua.xyz&pbk=6rnKHCkFuVeaJjiXLnJhfzQpQRSlPt-i6USvnRFiUBg&sid=223d6eafc6c6e894#🇰🇿 Антизаглушка 🚀 №347
+vless://60ae82da-f839-4125-aa1e-3df0e2a5c30c@5.188.224.167:2083?encryption=none&type=grpc&security=reality&mode=gun&serviceName=UpdateService&fp=chrome&sni=ir.ozone.ru&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38#🇩🇪 Антизаглушка 🚀 №348
+vless://f6b71e78-e065-4cf8-9fbb-b9e25ff67eff@5.188.224.167:2083?type=grpc&security=reality&encryption=none&fp=chrome&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38&sni=ir.ozone.ru&serviceName=UpdateService#🇩🇪 Антизаглушка 🚀 №349
+vless://f6b71e78-e065-4cf8-9fbb-b9e25ff67eff@5.188.224.73:2083?type=grpc&security=reality&fp=chrome&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38&sni=ir.ozone.ru&mode=gun&serviceName=UpdateService#🇺🇸 Антизаглушка 🚀 №350
+vless://fd74f9cd-d202-432e-8cd3-d445bfe30828@79.174.95.200:5446?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=random&sni=quiz.kinopoisk.ru&pbk=OtGux0Ty5TSzfIvlHVd4q_TdYbRUHKbS8WCxmpHJx18&sid=f543a7a8ec616e07&spx=%2F#🇫🇮 Антизаглушка 🚀 №351
