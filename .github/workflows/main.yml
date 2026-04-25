@@ -52,7 +52,7 @@ jobs:
                   # Проверка доступности порта (1 секунда)
                   if timeout 1s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
                     RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
-                    echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка №$COUNT" >> alive_keys.txt
+                    echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка 🚀 №$COUNT" >> alive_keys.txt
                     echo "$CLEAN_URL" >> existing_urls.txt
                     COUNT=$((COUNT + 1))
                   fi
