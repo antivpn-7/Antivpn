@@ -3,8 +3,9 @@
 #profile-update-interval: 1
 #subscription-update-interval: 1
 #announce:Обновлено! База: 222 рабочих серверов. Удалено старых: 38
+#support-url:https://wa.me/79659571323
+#profile-web-page-url:https://wa.me/79659571323
 happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
-
 happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
 happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
 happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN
@@ -90,8 +91,7 @@ vless://08a20674-fe78-4eae-bcd8-6f44480a3392@80.253.251.91:443?security=reality&
 vless://08a20674-fe78-4eae-bcd8-6f44480a3392@213.165.60.38:443?security=reality&encryption=none&pbk=ZyCQl-lSCWJnFzFg0V-g2sNq7OEsaH1McUeOz-bF2x0&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=c9f8b3657ab254a1#%F0%9F%87%B7%F0%9F%87%BA%20%D0%90%D0%BD%D1%82%D0%B8%D0%B7%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%20%E2%84%9676
 vless://08a20674-fe78-4eae-bcd8-6f44480a3392@45.151.62.219:443?security=reality&encryption=none&pbk=ZyCQl-lSCWJnFzFg0V-g2sNq7OEsaH1McUeOz-bF2x0&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=3880ee4bd536bae6#%F0%9F%87%B7%F0%9F%87%BA%20%D0%90%D0%BD%D1%82%D0%B8%D0%B7%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%20%E2%84%9677
 vmess://eyJhZGQiOiJ0b21zay5hcGl0b21pY2h2cG4uc2l0ZSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0Ijoid3d3LmJpbmcuY29tIiwiaWQiOiIxYjYwZGExNi1mYTU3LTQwMzAtYTk0YS05NDFiMjQ3YjdlYjQiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm13cyIsInBvcnQiOiI4ODgwIiwicHMiOiLwn4es8J+HpyDQkNC90YLQuNC30LDQs9C70YPRiNC60LAg4oSWNzgiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-vless://0@1.1.1.1:443?security=reality#--- 💎 ТВОИ VIP СЕРВЕРЫ 💎 ---
-vless://0@1.1.1.1:443?security=reality#--- 🚀 ОБЩАЯ БАЗА (222) ---
+
 vless://4ccff2bb-b761-40f0-95ec-a58b38862dab@158.160.12.31:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=ads.x5.ru&fp=chrome&security=reality&pbk=9V6nLW41-TzWLHj4NGN-MW-71IA-41W0VgUMOgihwTo&sid=&packetEncoding=xudp#🇺🇸 Антизаглушка 🚀 №1
 vless://4ccff2bb-b761-40f0-95ec-a58b38862dab@51.250.123.37:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=ads.x5.ru&fp=chrome&security=reality&pbk=9V6nLW41-TzWLHj4NGN-MW-71IA-41W0VgUMOgihwTo&sid=&packetEncoding=xudp#🇫🇷 Антизаглушка 🚀 №2
 vless://be882a5a-02cf-4e35-a7a9-1729b89fb3ca@51.250.83.22:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=m.vk.com&pbk=oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk&sid=a9c4f17e3b62d8#🇨🇿 Антизаглушка 🚀 №3
