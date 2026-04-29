@@ -24,29 +24,28 @@ jobs:
           LIMIT=100
 
           # 2. Сохраняем твои текущие сервера (VIP)
-          # Берем всё, что начинается на vless/vmess/ss/trojan, но НЕ содержит "Антизаглушка"
           touch README.md
           grep -E "^(vless|vmess|ss|trojan)://" README.md | grep -v "Антизаглушка" > my_vip.txt || touch my_vip.txt
 
           # 3. Скачиваем новые ключи
           curl -L -s "$SOURCE" -o incoming.txt
-          
-          # Очищаем от старых названий (все что после #) и берем только 100 штук
           grep -E "^(vless|vmess|ss|trojan)://" incoming.txt | cut -d'#' -f1 | head -n $LIMIT > source_cleaned.txt
 
-          # 4. Собираем новый README.md
-          # Заголовок и инфо
-          echo "#subscription-userinfo: upload=0; download=0; total=1125899906842624; expire=3803572800" > README.md
+          # 4. Собираем новый README.md с твоими данными
+          echo "#subscription-userinfo: upload=1; download=1; total=1; expire=999999999999999" > README.md
           echo "#profile-title: АНТИЗАГЛУШКА" >> README.md
           echo "#profile-update-interval: 1" >> README.md
-          echo "#announce: Обновлено: $(date +'%H:%M') ⚔️" >> README.md
+          echo "#subscription-update-interval: 1" >> README.md
+          echo "#announce: Если VPN не работает нажмите 🔄 , после ⏱️ и выберите сервер с наименьшим показателем ms!" >> README.md
+          echo "#support-url: https://wa.me/79659571323" >> README.md
+          echo "#profile-web-page-url: https://wa.me/79659571323" >> README.md
           echo "happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN" >> README.md
           echo "" >> README.md
 
-          # Вставляем твои сервера (как были)
+          # Вставляем твои VIP сервера
           cat my_vip.txt >> README.md
 
-          # Вставляем 100 новых серверов с твоим эмодзи и нумерацией
+          # Вставляем 100 новых серверов
           IDX=1
           while IFS= read -r line; do
             RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
@@ -66,6 +65,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Github Action"
           git add README.md
-          git commit -m "Updated with 100 new keys ⚔️" || exit 0
+          git commit -m "Updated with support links and 100 keys ⚔️" || exit 0
           git push origin main
           
