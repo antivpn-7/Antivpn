@@ -1,4 +1,4 @@
-name: Anti-Zaglushka Smart Sync 222 TOTAL CLEAN
+Name: Anti-Zaglushka Smart Sync 100 TOTAL CLEAN
 
 on:
   schedule:
@@ -20,10 +20,10 @@ jobs:
         run: |
           # 1. Настройки
           SOURCES=(
-            "https://vpn.tgflovv.ru:8443/sub/a231c089-9065-4525-a226-bb4f4fd487d2"
+            "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/WHITE-SNI-RU-all.txt"
           )
           FLAGS=("🇺🇸" "🇩🇪" "🇫🇮" "🇵🇱" "🇳🇱" "🇬🇧" "🇫🇷" "🇰🇿" "🇹🇷" "🇸🇪" "🇦🇹" "🇨🇿")
-          LIMIT=222
+          LIMIT=100
 
           # 2. Сохраняем твои VIP (те, что без значка № и без фразы "Антизаглушка")
           touch README.md
@@ -46,7 +46,7 @@ jobs:
                 PORT=$(echo "$CLEAN_URL" | sed -e 's/.*://' -e 's/[?#\/].*//')
                 if timeout 1.2s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
                   RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
-                  echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка 🏎️" >> new_keys.txt
+                  echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка ⚔️" >> new_keys.txt
                   NEW_ADDED=$((NEW_ADDED + 1))
                   echo "$CLEAN_URL" >> existing_urls.txt
                 fi
@@ -81,7 +81,7 @@ jobs:
           # Сначала вставляем твои VIP (Основной, Запасной и т.д.)
           cat my_own_keys.txt >> README.md
           
-          # Затем вставляем 222 сервера с чистой нумерацией
+          # Затем вставляем 100 сервера с чистой нумерацией
           IDX=1
           while IFS= read -r line; do
              CLEAN_LINE=$(echo "$line" | sed 's/ №[0-9]*//g')
@@ -103,6 +103,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Github Action"
           git add README.md
-          git commit -m "Total Clean: Limit 222 enforced" || exit 0
+          git commit -m "Total Clean: Limit 100 enforced" || exit 0
           git push origin main
           
+
