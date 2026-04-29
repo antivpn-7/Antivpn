@@ -46,7 +46,7 @@ jobs:
                 PORT=$(echo "$CLEAN_URL" | sed -e 's/.*://' -e 's/[?#\/].*//')
                 if timeout 1.2s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
                   RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
-                  echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка ⚔️" >> new_keys.txt
+                  echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка 🚀" >> new_keys.txt
                   NEW_ADDED=$((NEW_ADDED + 1))
                   echo "$CLEAN_URL" >> existing_urls.txt
                 fi
