@@ -25,12 +25,16 @@ jobs:
           FLAGS=("🇺🇸" "🇩🇪" "🇫🇮" "🇵🇱" "🇳🇱" "🇬🇧" "🇫🇷" "🇰🇿" "🇹🇷" "🇸🇪" "🇦🇹" "🇨🇿")
           LIMIT=100
 
-          # 2. Сохраняем твои VIP (те, что без значка № и без фразы "Антизаглушка")
+          # Создаем файлы, если их нет
           touch README.md
-          grep "://" README.md | grep -v "№" | grep -v "Антизаглушка" > my_own_keys.txt || touch my_own_keys.txt
+          touch my_own_keys.txt
+          touch existing_urls.txt
+
+          # 2. Сохраняем твои VIP (все, где НЕТ слова "Антизаглушка")
+          grep "://" README.md | grep -v "Антизаглушка" > my_own_keys.txt || true
           
-          # Берем список текущих URL из источников (чтобы не дублировать)
-          grep "ОБХОД БЛОКИРОВКИ" README.md | cut -d'#' -f1 > existing_urls.txt
+          # Собираем текущие URL, чтобы не добавлять их повторно
+          grep "://" README.md | cut -d'#' -f1 > existing_urls.txt || true
 
           # 3. Сбор и проверка НОВЫХ ключей
           > new_keys.txt
@@ -44,9 +48,8 @@ jobs:
               if [[ $CLEAN_URL =~ ^(vless|vmess|trojan|ss):// ]] && ! grep -q "$CLEAN_URL" existing_urls.txt; then
                 HOST=$(echo "$CLEAN_URL" | sed -e 's/.*@//' -e 's/:.*//' -e 's/\/.*//')
                 PORT=$(echo "$CLEAN_URL" | sed -e 's/.*://' -e 's/[?#\/].*//')
-                if timeout 1.2s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
+                if timeout 1.5s bash -c "true &>/dev/null > /dev/tcp/$HOST/$PORT" 2>/dev/null; then
                   RANDOM_FLAG=${FLAGS[$RANDOM % ${#FLAGS[@]}]}
-                  # Замена на ⚔️
                   echo "${CLEAN_URL}#${RANDOM_FLAG} Антизаглушка ⚔️" >> new_keys.txt
                   NEW_ADDED=$((NEW_ADDED + 1))
                   echo "$CLEAN_URL" >> existing_urls.txt
@@ -55,11 +58,11 @@ jobs:
             done < raw_temp.txt
           done
 
-          # 4. Формируем список серверов из источников
-          grep "ОБХОД БЛОКИРОВКИ" README.md > current_source_keys.txt || touch current_source_keys.txt
+          # 4. Формируем список серверов
+          grep "Антизаглушка" README.md > current_source_keys.txt || touch current_source_keys.txt
           cat new_keys.txt >> current_source_keys.txt
           
-          # 5. Очистка до лимита
+          # 5. Очистка до лимита 100
           TOTAL_BEFORE=$(wc -l < current_source_keys.txt)
           REMOVED=0
           if [ "$TOTAL_BEFORE" -gt "$LIMIT" ]; then
@@ -69,7 +72,7 @@ jobs:
              cp current_source_keys.txt cleaned_source_keys.txt
           fi
 
-          # 6. ПОЛНАЯ ПЕРЕЗАПИСЬ README.md (удаляем всё старое)
+          # 6. ПЕРЕЗАПИСЬ README.md
           TRAFFIC_LINE=$(grep "#subscription-userinfo" README.md | head -n 1 || echo "#subscription-userinfo: upload=0; download=0; total=1125899906842624; expire=3803572800")
           echo "$TRAFFIC_LINE" > README.md
           echo "#profile-title: АНТИЗАГЛУШКА " >> README.md
@@ -79,10 +82,10 @@ jobs:
           echo "happ://routing/bypass-lan-and-cn?name=Bypass+LAN+and+CN" >> README.md
           echo "" >> README.md
           
-          # Сначала вставляем твои VIP (Основной, Запасной и т.д.)
+          # Вставляем твои VIP
           cat my_own_keys.txt >> README.md
           
-          # Затем вставляем 100 сервера с чистой нумерацией
+          # Вставляем 100 ключей с нумерацией
           IDX=1
           while IFS= read -r line; do
              CLEAN_LINE=$(echo "$line" | sed 's/ №[0-9]*//g')
@@ -90,7 +93,7 @@ jobs:
              IDX=$((IDX + 1))
           done < cleaned_source_keys.txt
 
-          # 7. Отчет в Telegram (Замена на ⚔️)
+          # 7. Отчет в Telegram
           TOTAL_FINAL=$(( $(wc -l < my_own_keys.txt) + $(wc -l < cleaned_source_keys.txt) ))
           MSG="⚔️ *АНТИЗАГЛУШКА*%0A%0A✅ Добавлено новых: *$NEW_ADDED*%0A🧹 Очищено старых: *$REMOVED*%0A📊 Всего в списке: *$TOTAL_FINAL*%0A🕒 Время: $(date +'%H:%M')"
           
@@ -104,6 +107,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Github Action"
           git add README.md
-          git commit -m "Total Clean: Limit 100 and new Emoji enforced" || exit 0
+          git commit -m "Fixed Sync: Limit 100 and Emoji ⚔️" || exit 0
           git push origin main
           
